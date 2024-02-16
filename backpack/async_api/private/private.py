@@ -293,7 +293,7 @@ class BackpackPrivate(BaseClient):
             "selfTradePrevention": self_trade_prevention,
             "side": side.capitalize(),
             "symbol": symbol.upper(),
-            "timeInForce": time_in_force.upper(),
+            "timeInForce": time_in_force,
             "triggerPrice": trigger_price
         }
 
