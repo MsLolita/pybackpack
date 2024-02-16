@@ -62,7 +62,7 @@ class BackpackPublic(BaseClient):
 
         return await self.session.get(url)
 
-    async def get_order_book_depth(self):
+    async def get_order_book_depth(self, symbol: str):
         """
         Retrieves the order book depth for a given market symbol.
 
@@ -73,9 +73,13 @@ class BackpackPublic(BaseClient):
 
         url = self.API_URL + '/api/v1/depth'
 
-        return await self.session.get(url)
+        params = {
+            'symbol': symbol
+        }
 
-    async def get_k_lines(self, symbol: str, interval: Interval, start_time: int, end_time: int):
+        return await self.session.get(url, params=params)
+
+    async def get_k_lines(self, symbol: str, interval: str, start_time: int, end_time: int):
         """
         Get K-Lines for the given market symbol, optionally providing a startTime and endTime.
         If no startTime is provided, the interval duration will be used.
