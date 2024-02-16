@@ -7,12 +7,12 @@ setup(
     packages=['backpack'],
     description='Backpack REST API python implementation',
     long_description_content_type="text/x-rst",
-    url='https://github.com/sammchardy/python-binance',
+    url='https://github.com/MsLolita/pybackpack',
     author='Web3 Enjoyer',
     license='MIT',
     author_email='',
     install_requires=[
-        'aiohttp', 'ed25519', 'dateparser', 'aiohttp', 'ujson', 'websockets', 'pycryptodome'
+        'aiohttp', 'ed25519', 'PyNaCl'
     ],
     keywords='backpack solana.py exchange rest api bitcoin ethereum btc eth sol solana',
     classifiers=[
