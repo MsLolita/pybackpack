@@ -5,6 +5,7 @@ from backpack import Backpack
 
 async def main():
     # Put api keys if you want to use private api
+    # Ability to use proxy in format http://username:password@proxy_ip:proxy_port
     backpack = Backpack()
 
     response = await backpack.get_status()
