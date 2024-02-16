@@ -11,10 +11,10 @@ pip install backpack-api
 Source code
 https://github.com/MsLolita/pybackpack
 
-Official documentation to api (not his sdk)
+Official documentation to api (not sdk)
 https://docs.backpack.exchange/
 
-If you want to check library look into examples.
+If you want to check out the library, check out the examples.
 
 ## Before using
 
