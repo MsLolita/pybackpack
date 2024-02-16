@@ -6,7 +6,7 @@ This is an unofficial Python SDK for the [Backpack exchange](https://backpack.ex
 
 ## Installation
 
-To install the BackPack library, run the following command:
+To install the [BackPack library](https://pypi.org/project/backpack-api/), run the following command:
 
 ```bash
 pip install backpack-api
