@@ -2,3 +2,5 @@ backpack/__pycache__/
 *__pycache__
 .idea/
 venv*/
+*.egg-info/
+dist/

@@ -2,7 +2,7 @@
 from setuptools import setup
 
 setup(
-    name='python-backpack',
+    name='py-backpack',
     version='0.0.1',
     packages=['backpack'],
     description='Backpack REST API python implementation',
