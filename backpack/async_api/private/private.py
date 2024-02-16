@@ -291,9 +291,9 @@ class BackpackPrivate(BaseClient):
             "quantity": quantity,
             "quoteQuantity": quote_quantity,
             "selfTradePrevention": self_trade_prevention,
-            "side": side,
-            "symbol": symbol,
-            "timeInForce": time_in_force,
+            "side": side.capitalize(),
+            "symbol": symbol.upper(),
+            "timeInForce": time_in_force.upper(),
             "triggerPrice": trigger_price
         }
 
