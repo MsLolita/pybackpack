@@ -2,12 +2,12 @@
 from setuptools import setup
 
 setup(
-    name='pybackpack',
+    name='backpackpy',
     version='0.0.1',
     packages=['backpack'],
     description='Backpack REST API python implementation',
     long_description_content_type="text/x-rst",
-    url='https://github.com/MsLolita/pybackpack',
+    url='https://github.com/MsLolita/backpackpy',
     author='Web3 Enjoyer',
     license='MIT',
     author_email='',
