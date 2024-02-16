@@ -27,6 +27,7 @@ For the official documentation of the Backpack API (not the SDK), please visit:
 ## Examples
 
 If you'd like to see the library in action, please check out the [examples](https://github.com/MsLolita/pybackpack/tree/master/examples) provided.
+
 (Optional) Proxy in format: http://username:password@proxy_ip:proxy_port
 
 ## Before Using
