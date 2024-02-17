@@ -283,6 +283,14 @@ class BackpackPrivate(BaseClient):
         """
         url = self.API_URL + '/api/v1/order'
 
+        match side.lower():
+            case "buy":
+                side = "Bid"
+            case "sell":
+                side = "Ask"
+            case _:
+                raise ValueError(f"Invalid side: {side}. Must be 'buy' or 'sell'")
+
         payload = {
             "clientId": client_id,
             "orderType": order_type.capitalize(),
