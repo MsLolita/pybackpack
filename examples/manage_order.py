@@ -20,7 +20,7 @@ async def main():
         "order_type": "Limit",  # ONLY LIMIT ORDERS working on exchange
         "price": "0.0000130",
         "quantity": "729",
-        "side": "buy",  # Bid - buy, Ask - sell
+        "side": "buy",
         "symbol": symbol,
     }
 
