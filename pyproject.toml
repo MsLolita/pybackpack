@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "backpack-api"
-version = "0.0.11"
+version = "0.0.12"
 description = "Backpack REST API python implementation"
 authors = ["Web3 Enjoyer"]
 readme = "README.md"

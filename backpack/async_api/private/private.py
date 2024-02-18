@@ -4,8 +4,9 @@ from typing import Callable, Optional
 from urllib.parse import urlencode
 
 import aiohttp
-import ed25519
 
+from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
+from cryptography.hazmat.primitives import serialization
 from backpack.base.models import BaseClient
 
 
@@ -16,9 +17,14 @@ class BackpackPrivate(BaseClient):
         if api_key is not None and api_secret is None:
             raise ValueError('api_secret must be provided if api_key is provided')
         if api_secret is not None:
-            self.private_key = ed25519.SigningKey(base64.b64decode(api_secret))
-            self.verifying_key = self.private_key.get_verifying_key()
-            self.verifying_key_b64 = base64.b64encode(self.verifying_key.to_bytes()).decode()
+            self.private_key = Ed25519PrivateKey.from_private_bytes(base64.b64decode(api_secret))
+            self.verifying_key = self.private_key.public_key()
+            self.verifying_key_b64 = base64.b64encode(
+                self.verifying_key.public_bytes(
+                    encoding=serialization.Encoding.Raw,
+                    format=serialization.PublicFormat.Raw
+                )
+            ).decode()
 
     def _sign_request(self, instruction: str, body: Optional[dict] = None):
         """
