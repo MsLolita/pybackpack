@@ -15,7 +15,7 @@ class Backpack(BackpackPrivate, BackpackPublic):
     def _init_session(self):
         return aiohttp.ClientSession(
             trust_env=True,
-            connector=self.proxy and ProxyConnector.from_url(self.proxy)
+            connector=self.proxy and ProxyConnector.from_url(self.proxy, ssl=False)
         )
 
     async def close(self):
